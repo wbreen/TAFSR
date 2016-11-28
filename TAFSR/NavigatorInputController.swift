@@ -3,7 +3,7 @@
 //  TAFSR
 //
 //  Created by William Breen on 11/16/16.
-//  Copyright © 2016 William Breen. All rights reserved.
+//  Copyright © 2016 William Breen, Alexandra Meads. All rights reserved.
 //
 
 import UIKit

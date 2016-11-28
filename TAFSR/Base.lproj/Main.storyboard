@@ -138,6 +138,9 @@
                                 <frame key="frameInset" minX="242" minY="595" width="74" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Add to List"/>
+                                <connections>
+                                    <action selector="addAssignment:" destination="sb1-Pu-NGg" eventType="touchUpInside" id="yk9-YW-k2D"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LMe-wN-u7T">
                                 <frame key="frameInset" minX="13" minY="595" width="118" height="30"/>

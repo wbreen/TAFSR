@@ -16,6 +16,7 @@
 		2A0FAF561DDCE82700A55604 /* DispatchQueueController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0FAF551DDCE82700A55604 /* DispatchQueueController.swift */; };
 		2A0FAF581DDCE83800A55604 /* NavigatorInputController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0FAF571DDCE83800A55604 /* NavigatorInputController.swift */; };
 		2A0FAF5A1DDCE84A00A55604 /* NavigationInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0FAF591DDCE84A00A55604 /* NavigationInfoController.swift */; };
+		81CE439F1DECC29100FAB4A7 /* DispatchInputModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CE439E1DECC29100FAB4A7 /* DispatchInputModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		2A0FAF551DDCE82700A55604 /* DispatchQueueController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DispatchQueueController.swift; sourceTree = "<group>"; };
 		2A0FAF571DDCE83800A55604 /* NavigatorInputController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigatorInputController.swift; sourceTree = "<group>"; };
 		2A0FAF591DDCE84A00A55604 /* NavigationInfoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationInfoController.swift; sourceTree = "<group>"; };
+		81CE439E1DECC29100FAB4A7 /* DispatchInputModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DispatchInputModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 				2A0FAF551DDCE82700A55604 /* DispatchQueueController.swift */,
 				2A0FAF571DDCE83800A55604 /* NavigatorInputController.swift */,
 				2A0FAF591DDCE84A00A55604 /* NavigationInfoController.swift */,
+				81CE439E1DECC29100FAB4A7 /* DispatchInputModel.swift */,
 			);
 			path = TAFSR;
 			sourceTree = "<group>";
@@ -154,6 +157,7 @@
 				2A0FAF5A1DDCE84A00A55604 /* NavigationInfoController.swift in Sources */,
 				2A0FAF581DDCE83800A55604 /* NavigatorInputController.swift in Sources */,
 				2A0FAF561DDCE82700A55604 /* DispatchQueueController.swift in Sources */,
+				81CE439F1DECC29100FAB4A7 /* DispatchInputModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,6 +319,7 @@
 				2A0FAF521DDCE45F00A55604 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
