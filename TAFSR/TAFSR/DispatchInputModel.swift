@@ -27,6 +27,33 @@ class DispatchInputModelAssignment {
 
 class DispatchInputModelList {
     
+    //this needs to let each assignment be accessable from outside the class
     var assignments = [DispatchInputModelAssignment]()
     
+    
+    /*
+    var assignment: [DispatchInputModelAssignment]
+    var gotten: [Bool]
+    
+    init (){
+        //create each individual assignment
+        //for each, append that you have not gotten it yet in the 'gotten' array, for use later
+    }
+    
+    func getAssignment(_ identifier: Int) -> DispatchInputModelAssignment {
+        //which assignment you are looking at (
+        var which = 0
+        
+        //for each assignment starting at 0, you need the name, size, final size, and complete
+        repeat {
+            
+        } while gotten[which]
+        
+    }
+    
+    func addAssignment() {
+        //adds an assignment to the list of assignments (for when you hit 'add to list')
+        
+    }
+    */
 }

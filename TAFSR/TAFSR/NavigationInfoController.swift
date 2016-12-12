@@ -43,6 +43,9 @@ class NavigationInfoController: UIViewController {
         
         // from http://stackoverflow.com/questions/32010429/how-to-disable-back-button-in-navigation-bar
         navigationItem.hidesBackButton = true
+        
+        let assignmentList = DispatchInputModelList()
+        partyName?.text = "\(assignmentList.assignments[0].name)"
     }
     
     override func didReceiveMemoryWarning() {

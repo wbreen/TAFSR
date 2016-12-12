@@ -62,8 +62,8 @@ class DispatchTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // returns the same amount of rows as there are total assignments (ToDo)
-        //
-        return assignmentList.assignments.count
+
+        return assignmentList.assignments.count + 1
     }
     
     
@@ -71,10 +71,19 @@ class DispatchTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "LabelCell", for: indexPath) as! CustomerTableViewCell
         
         //needs to get the assignment from the assignment list, then name, size, and cancel
-        //need to set the
-        //these will always be the same
-        cell.nameLabel?.text = "\(assignmentList.assignments)"
+        //these will be the same for each person in the assignment list
+        
+        //how to get the current row that you're on:
+        /*indexPath.row*/
+        
+
+        //have to figure out how to get the values out of the array of the assignmentList of assignments
+        //<HERE>
+        cell.nameLabel?.text = "\(assignmentList.assignments[0].name)"
+        //</HERE>
         cell.sizeLabel?.text = "\(assignment.size)"
+        
+        
         
         //this may change, depending on the boolean, also need to change the background color of the cell
         if !(assignment.isComplete) {
