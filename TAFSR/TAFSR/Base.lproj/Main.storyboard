@@ -156,7 +156,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="bIU-lJ-uCC" kind="show" id="Iqf-nZ-XAY"/>
+                                    <segue destination="bIU-lJ-uCC" kind="show" identifier="showDispatchTableViewController" id="Iqf-nZ-XAY"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -395,15 +395,18 @@
                                 <rect key="frame" x="0.0" y="92" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1SS-9i-mmt" id="1Oo-Ih-unc">
-                                    <frame key="frameInset" width="375" height="43"/>
+                                    <frame key="frameInset" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Jq-nA-EFK" userLabel="nameLabel">
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Jq-nA-EFK" userLabel="nameLabel">
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="90" id="I6M-yb-dux"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RepSize" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Wg-Fg-4vu" userLabel="sizeLabel">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RepSize" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Wg-Fg-4vu" userLabel="sizeLabel">
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -414,16 +417,20 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cYT-f7-5HR" userLabel="cancelButton">
-                                            <state key="normal" title="Button"/>
+                                            <state key="normal" title="Button">
+                                                <color key="titleColor" red="1" green="0.090747517218905061" blue="0.16182087527080113" alpha="1" colorSpace="calibratedRGB"/>
+                                            </state>
                                             <connections>
                                                 <action selector="cancelButton:" destination="1SS-9i-mmt" eventType="touchUpInside" id="xKf-KZ-mPB"/>
+                                                <action selector="cancelCar:" destination="bIU-lJ-uCC" eventType="touchUpInside" id="B0P-xO-6dx"/>
                                             </connections>
                                         </button>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="9Wg-Fg-4vu" firstAttribute="leading" secondItem="0Jq-nA-EFK" secondAttribute="trailing" constant="78" id="73K-0F-3EN"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="9w0-Kb-xgh" secondAttribute="bottom" constant="3" id="Ecs-Sa-9ji"/>
+                                        <constraint firstItem="9Wg-Fg-4vu" firstAttribute="leading" secondItem="1Oo-Ih-unc" secondAttribute="leadingMargin" constant="148" id="FwD-e4-372"/>
                                         <constraint firstItem="0Jq-nA-EFK" firstAttribute="top" secondItem="1Oo-Ih-unc" secondAttribute="topMargin" constant="3" id="UOM-0o-ues"/>
+                                        <constraint firstItem="9Wg-Fg-4vu" firstAttribute="centerX" secondItem="1Oo-Ih-unc" secondAttribute="centerX" id="Ula-36-1c0"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="cYT-f7-5HR" secondAttribute="trailing" constant="25" id="VmF-Xd-d3o"/>
                                         <constraint firstItem="cYT-f7-5HR" firstAttribute="top" secondItem="1Oo-Ih-unc" secondAttribute="topMargin" constant="3" id="Vu3-G9-iV2"/>
                                         <constraint firstItem="9w0-Kb-xgh" firstAttribute="top" secondItem="1Oo-Ih-unc" secondAttribute="topMargin" constant="3" id="YAK-ZW-vC0"/>
@@ -440,6 +447,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="cancel" destination="cYT-f7-5HR" id="YeQ-pA-PVI"/>
                                     <outlet property="finalSize" destination="9w0-Kb-xgh" id="bLd-4q-bFc"/>
                                     <outlet property="nameLabel" destination="0Jq-nA-EFK" id="6ga-wJ-cjl"/>
                                     <outlet property="sizeLabel" destination="9Wg-Fg-4vu" id="OtB-RF-Ecm"/>

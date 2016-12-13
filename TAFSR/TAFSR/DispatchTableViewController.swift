@@ -12,7 +12,9 @@ class CustomerTableViewCell: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var sizeLabel: UILabel!
     @IBOutlet weak var finalSize: UILabel!
+    @IBOutlet weak var cancel: UIButton!
     @IBAction func cancelButton(_ sender: UIButton) {
+        
         //if the cancel button is hit, set "final size" to "cancelled", boolean to complete
         //if not complete, set cancelButton to touchable and finalSize to ""
         //if complete, disable cancel button and set finalSize to the final size
@@ -23,7 +25,7 @@ class CustomerTableViewCell: UITableViewCell {
 class DispatchTableViewController: UITableViewController {
     
     var assignmentList = DispatchInputModelList()
-    var assignment = DispatchInputModelAssignment()
+    //var assignment = DispatchInputModelAssignment()
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
@@ -63,9 +65,19 @@ class DispatchTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // returns the same amount of rows as there are total assignments (ToDo)
 
-        return assignmentList.assignments.count + 1
+        let numRows = assignmentList.assignments.count
+        print(numRows)
+
+        return numRows
+        
     }
     
+    @IBAction func cancelCar(_ sender: UIButton) {
+        sender.isEnabled = false
+        sender.setTitle("", for: .normal)
+        let cell = CustomerTableViewCell()
+        cell.finalSize?.text = "Literally anything"
+    }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "LabelCell", for: indexPath) as! CustomerTableViewCell
@@ -79,27 +91,54 @@ class DispatchTableViewController: UITableViewController {
 
         //have to figure out how to get the values out of the array of the assignmentList of assignments
         //<HERE>
-        cell.nameLabel?.text = "\(assignmentList.assignments[0].name)"
+        print(assignmentList.assignments)
+        cell.nameLabel?.text = "\(assignmentList.assignments[indexPath.row].name)"
+        //cell.nameLabel?.text = "name"
+        
         //</HERE>
-        cell.sizeLabel?.text = "\(assignment.size)"
+        cell.sizeLabel?.text = "\(assignmentList.assignments[indexPath.row].size)"
+        //cell.sizeLabel?.text = "size"
         
         
         
         //this may change, depending on the boolean, also need to change the background color of the cell
-        if !(assignment.isComplete) {
-            //need to complete this, show button if not complete
-            cell.finalSize?.text = ""
-            cell.finalSize?.textColor = UIColor.red
+        
+        //if the assignment is complete, or if cancel has been hit (aka disabled) then have finalSize be black and a number
+        if (assignmentList.assignments[indexPath.row].isComplete) {
+
+            
+            cell.finalSize?.text = "\(assignmentList.assignments[indexPath.row].finalSize)"
+            cell.finalSize?.textColor = UIColor.black
+            
+            cell.cancel.setTitle("", for: .normal)
+            cell.cancel.isEnabled = false
+            
+        }
+        //if cancel has been hit, set final size == to sizeLabel
+        if !(cell.cancel.isEnabled){
+            cell.finalSize?.text = cell.sizeLabel?.text
+            cell.finalSize?.textColor = UIColor.black
+            
         } else {
             //need to redo this, show final size of the party or that it was cancelled
             //make the actual button not touchable, and background color different
-            cell.finalSize?.text = "\(assignment.finalSize)"
-            cell.finalSize?.textColor = UIColor.black
+//            cell.finalSize?.text = "\(assignmentList.assignments[indexPath.row].finalSize)"
+//            cell.finalSize?.textColor = UIColor.black
+//            cell.cancel.setTitle("", for: .normal)
+//            cell.cancel.isEnabled = false
+//            
+            cell.finalSize?.text = ""
+            cell.finalSize?.textColor = UIColor.red
+            
+            cell.cancel.setTitle("Cancel", for: .normal)
         }
         
         
         return cell
     }
+    
+
+    
     //*/
     
     /*

@@ -20,12 +20,12 @@ class DispatchInputController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        if segue.identifier == "showDispatchQueueController" {
+        if segue.identifier == "showDispatchTableViewController" {
             
-            let dispatchQueueController = segue.destination as! DispatchQueueController
+            let dispatchTableViewController = segue.destination as! DispatchTableViewController
             
             //send list to dispatch queue controller
-            dispatchQueueController.assignmentList = dispatchAssignmentList
+            dispatchTableViewController.assignmentList = dispatchAssignmentList
             
         } else if segue.identifier == "showDispatchInputController" {
             
@@ -53,6 +53,7 @@ class DispatchInputController: UIViewController {
             newAssignment.privateIdentifier = createUniqueIdentifier()
             
             dispatchAssignmentList.assignments.append(newAssignment)
+            print(dispatchAssignmentList.assignments.count)
             
             nameTextField.text = ""
             partySizeTextField.text = ""
