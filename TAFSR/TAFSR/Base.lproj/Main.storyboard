@@ -395,7 +395,7 @@
                                 <rect key="frame" x="0.0" y="92" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1SS-9i-mmt" id="1Oo-Ih-unc">
-                                    <frame key="frameInset" width="375" height="43.5"/>
+                                    <frame key="frameInset" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Jq-nA-EFK" userLabel="nameLabel">
@@ -422,7 +422,6 @@
                                             </state>
                                             <connections>
                                                 <action selector="cancelButton:" destination="1SS-9i-mmt" eventType="touchUpInside" id="xKf-KZ-mPB"/>
-                                                <action selector="cancelCar:" destination="bIU-lJ-uCC" eventType="touchUpInside" id="B0P-xO-6dx"/>
                                             </connections>
                                         </button>
                                     </subviews>

@@ -23,10 +23,11 @@ class NavigatorInputController: UIViewController {
             let navigationInfoController = segue.destination as! NavigationInfoController
             
             //send list & vehicle to navigation info controller
+            goButton()
             navigationInfoController.navigatorList = navigatorList
             navigationInfoController.thisNavigator = newNavigator
             
-        } else if segue.identifier == "showNavigationInputController" {
+        } else if segue.identifier == "showNavigatorInputController" {
             
             let firstViewController = segue.destination as! ViewController
             
@@ -37,7 +38,7 @@ class NavigatorInputController: UIViewController {
         
     }
     
-    @IBAction func goButton(_ sender: UIButton) {
+    func goButton(/*_ sender: UIButton*/) {
         //adds vehicle name to database, saves for use in assignment distribution
         
         if vehicleNameField.text != "" {
@@ -53,6 +54,7 @@ class NavigatorInputController: UIViewController {
             }
             newNavigator.privateIdentifier = uniqueIdentifier
             navigatorList.navigators.append(newNavigator)
+            print(navigatorList.navigators.count)
             
         } else {
             showAlert()

@@ -24,18 +24,18 @@ class NavigationInfoController: UIViewController {
     
     //unused because disabled user ability to go back to new navigator screen
     /*override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-        if segue.identifier == "showNavigationInfoController" {
-            
-            let navigatorInputController = segue.destination as! NavigatorInputController
-            
-            //send list & vehicle to navigator input controller
-            navigatorInputController.navigatorList = navigatorList
-            navigatorInputController.newNavigator = thisNavigator
-            
-        }
-        
-    }*/
+     
+     if segue.identifier == "showNavigationInfoController" {
+     
+     let navigatorInputController = segue.destination as! NavigatorInputController
+     
+     //send list & vehicle to navigator input controller
+     navigatorInputController.navigatorList = navigatorList
+     navigatorInputController.newNavigator = thisNavigator
+     
+     }
+     
+     }*/
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,8 +44,9 @@ class NavigationInfoController: UIViewController {
         // from http://stackoverflow.com/questions/32010429/how-to-disable-back-button-in-navigation-bar
         navigationItem.hidesBackButton = true
         
-        let assignmentList = DispatchInputModelList()
-        partyName?.text = "\(assignmentList.assignments[0].name)"
+        //WAS CAUSING INDEX ERROR
+        //let assignmentList = DispatchInputModelList()
+        //partyName?.text = "\(assignmentList.assignments[0].name)"
     }
     
     override func didReceiveMemoryWarning() {
@@ -80,4 +81,3 @@ class NavigationInfoController: UIViewController {
     }
     
 }
-

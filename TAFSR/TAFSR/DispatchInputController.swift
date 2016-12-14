@@ -36,7 +36,7 @@ class DispatchInputController: UIViewController {
         }
         
     }
-
+    
     // add new assigment to list and database
     @IBAction func addAssignment(_ sender: UIButton) {
         
@@ -53,7 +53,6 @@ class DispatchInputController: UIViewController {
             newAssignment.privateIdentifier = createUniqueIdentifier()
             
             dispatchAssignmentList.assignments.append(newAssignment)
-            print(dispatchAssignmentList.assignments.count)
             
             nameTextField.text = ""
             partySizeTextField.text = ""
@@ -61,17 +60,31 @@ class DispatchInputController: UIViewController {
             locationTextField.text = ""
             destinationTextField.text = ""
             
+            //Joel Hollingsworth
+            // build a URL add on
+            let addOn = "add?name=\(newAssignment.name)&size=\(newAssignment.size)&phone=\(newAssignment.phoneNumber)&location=\(newAssignment.location)&destination=\(newAssignment.destination)"
+            
+            // talk to the server
+            RestApiManager.instance.makeRequest(addOn, resultsHandler: myResultsHandler)
+            
         } else {
             showAlert()
         }
         
-        //ToDo: add list to the database
+    }
+    
+    //Joel Hollingsworth
+    func myResultsHandler(theResponse: String) {
+        DispatchQueue.main.async() {
+            //response was the name of a UILabel in the example
+            //self.response.text = theResponse
+        }
     }
     
     //verify their is info in each field
     func verifyAssignmentInfo() -> Bool {
         
-        if nameTextField.text != "" && partySizeTextField.text != "" && Int(partySizeTextField.text!) != nil && phoneNumberTextField.text != "" && Int(partySizeTextField.text!) != nil && locationTextField.text != "" && destinationTextField.text != "" {
+        if nameTextField.text != "" && partySizeTextField.text != "" && Int(partySizeTextField.text!) != nil && phoneNumberTextField.text != "" && Int(phoneNumberTextField.text!) != nil && locationTextField.text != "" && destinationTextField.text != "" {
             return true
         } else {
             return false

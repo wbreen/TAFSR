@@ -16,6 +16,7 @@
 		2A0FAF561DDCE82700A55604 /* DispatchQueueController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0FAF551DDCE82700A55604 /* DispatchQueueController.swift */; };
 		2A0FAF581DDCE83800A55604 /* NavigatorInputController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0FAF571DDCE83800A55604 /* NavigatorInputController.swift */; };
 		2A0FAF5A1DDCE84A00A55604 /* NavigationInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0FAF591DDCE84A00A55604 /* NavigationInfoController.swift */; };
+		2A5541451E0104C90072C3A9 /* RestApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5541441E0104C90072C3A9 /* RestApiManager.swift */; };
 		2AE88BD81DFE32A0000D428F /* DispatchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE88BD71DFE32A0000D428F /* DispatchTableViewController.swift */; };
 		8166F8F31DF8A05F0004EB80 /* NavigatorInputModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8166F8F21DF8A05F0004EB80 /* NavigatorInputModel.swift */; };
 		81CE439F1DECC29100FAB4A7 /* DispatchInputModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CE439E1DECC29100FAB4A7 /* DispatchInputModel.swift */; };
@@ -33,6 +34,7 @@
 		2A0FAF551DDCE82700A55604 /* DispatchQueueController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DispatchQueueController.swift; sourceTree = "<group>"; };
 		2A0FAF571DDCE83800A55604 /* NavigatorInputController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigatorInputController.swift; sourceTree = "<group>"; };
 		2A0FAF591DDCE84A00A55604 /* NavigationInfoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationInfoController.swift; sourceTree = "<group>"; };
+		2A5541441E0104C90072C3A9 /* RestApiManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestApiManager.swift; sourceTree = "<group>"; };
 		2AE88BD71DFE32A0000D428F /* DispatchTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DispatchTableViewController.swift; sourceTree = "<group>"; };
 		8166F8F21DF8A05F0004EB80 /* NavigatorInputModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigatorInputModel.swift; sourceTree = "<group>"; };
 		81CE439E1DECC29100FAB4A7 /* DispatchInputModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DispatchInputModel.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 				81CE439E1DECC29100FAB4A7 /* DispatchInputModel.swift */,
 				8166F8F21DF8A05F0004EB80 /* NavigatorInputModel.swift */,
 				2AE88BD71DFE32A0000D428F /* DispatchTableViewController.swift */,
+				2A5541441E0104C90072C3A9 /* RestApiManager.swift */,
 			);
 			path = TAFSR;
 			sourceTree = "<group>";
@@ -165,6 +168,7 @@
 				2A0FAF581DDCE83800A55604 /* NavigatorInputController.swift in Sources */,
 				2AE88BD81DFE32A0000D428F /* DispatchTableViewController.swift in Sources */,
 				2A0FAF561DDCE82700A55604 /* DispatchQueueController.swift in Sources */,
+				2A5541451E0104C90072C3A9 /* RestApiManager.swift in Sources */,
 				81CE439F1DECC29100FAB4A7 /* DispatchInputModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
